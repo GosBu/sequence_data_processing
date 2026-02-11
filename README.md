@@ -1,5 +1,104 @@
 # DNA Sequence Fetcher
 
+## Project description
+
+This project demonstrates how to retrieve biological data in FASTA format from the public GenBank database (NCBI) using Python and the Biopython library.
+
+---
+
+**The goal of the project is to:**
+
+- download DNA sequences based on given identifiers,
+
+- filter sequences by length (up to 200 nucleotides),
+
+- save the results to a file in FASTA format.
+
+
+The project demonstrates working with external data sources, data processing, and saving outputs in Python.
+
+---
+
+## Technologies and libraries
+
+- **Python 3**
+
+- **Biopython** - for fetching and parsing biological sequences
+
+- **Standard Python modules**: `os`, `datetime` (if needed for file handling and timestamps)
+
+---
+
+## How the code works
+
+1. Setting the user email address – required by NCBI for data retrieval.
+
+2. Defining a list of DNA sequence identifiers (`ids`) from GenBank.
+
+3. Downloading sequences in FASTA format using the `Entrez.efetch` function.
+
+4. Loading sequences into the program using `SeqIO.parse`.
+
+5. Filtering sequences to include only those with a length of up to 200 nucleotides.
+
+6. Closing the connection to the database.
+
+7. Displaying the number of retrieved sequences that meet the length criterion.
+
+8. Saving the results to the file `sekwencje_do_200nt.txt` in FASTA format.
+
+---
+
+## Example applications
+
+- Retrieving and filtering data from public databases
+
+- Data processing in Python
+
+- Building automated pipelines for working with large datasets
+
+- Preparing data for further analysis or visualisation
+
+---
+
+## How to run
+
+1. Clone the repository:
+
+`git clone https://github.com/TWOJE_USERNAME/dna_sequence_analysis.git`
+`cd dna_sequence_analysis`
+
+
+2. Install required packages:
+
+`pip install biopython`
+
+
+3. Run the script:
+
+`python fetch_sequences.py`
+
+
+After running the script, the file sekwencje_do_200nt.txt containing the retrieved and filtered sequences will appear in the project folder.
+
+---
+
+## Skills demonstrated in this project:
+
+- Working with Python and external libraries
+
+- Fetching data from APIs and public databases
+
+- Parsing and filtering data
+
+- Working with files and data structures in Python
+
+- Writing clean and modular code
+
+
+---
+
+
 ## Opis projektu
 
 Ten projekt pokazuje, jak pobierać dane biologiczne w formacie FASTA z publicznej bazy GenBank (NCBI) przy użyciu Pythona i biblioteki **Biopython**.  
@@ -49,20 +148,20 @@ Projekt jest przykładem **pracy z zewnętrznymi źródłami danych, przetwarzan
 1. Sklonuj repozytorium:
 
 bash
-```git clone https://github.com/TWOJE_USERNAME/dna_sequence_analysis.git```
-```cd dna_sequence_analysis```
+`git clone https://github.com/TWOJE_USERNAME/dna_sequence_analysis.git`
+`cd dna_sequence_analysis`
 
 
 2. Zainstaluj wymagane pakiety:
 
 bash
-```pip install biopython```
+`pip install biopython`
 
 
 3. Uruchom skrypt:
 
 bash
-```python fetch_sequences.py```
+`python fetch_sequences.py`
 
 Po uruchomieniu w folderze projektu pojawi się plik sekwencje_do_200nt.txt zawierający pobrane i przefiltrowane sekwencje.
 
